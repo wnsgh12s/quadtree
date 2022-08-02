@@ -21,7 +21,6 @@ class Quadtree {
         x           = this.boundary.x,
         y           = this.boundary.y;        
  
-    //top right node
     this.nodes[0] = new Quadtree({
         x       : x + subWidth, 
         y       : y, 
@@ -37,7 +36,7 @@ class Quadtree {
         h  : subHeight
     }, this.max_objects, this.max_levels, nextLevel);
     
-    //bottom left node
+
     this.nodes[2] = new Quadtree({
       x       : x + subWidth, 
       y       : y + subHeight, 
@@ -51,8 +50,7 @@ class Quadtree {
         w   : subWidth, 
         h  : subHeight
     }, this.max_objects, this.max_levels, nextLevel);
-    
-    //bottom right node
+   
     
 };
 
